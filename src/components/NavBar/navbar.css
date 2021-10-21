@@ -3,3 +3,93 @@
     --light_black:#2A2A2A;
     --black:#1E1D1D;
   }
+.navbar_container{
+  background-color:var(--black);
+}
+.navbar_container .navbar_list{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-direction:row;
+  height:90px;
+  margin:0rem 4rem;
+}
+.navbar_container .navbar_list .navbar_items{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:row;
+}
+.navbar_container .navbar_list .navbar_items .logo{
+  width:123.28px;
+  height:20px;
+  cursor:pointer;
+}
+.navbar_container .navbar_list .navbar_items ul{
+  list-style-type:none;
+  margin-left:2rem;
+}
+.navbar_container .navbar_list .navbar_items ul li{
+  display:inline-block;
+  padding:0rem 2rem;
+}
+.navbar_container .navbar_list .navbar_items ul li a{
+  font-size:14px;
+  font-family:"Medium";
+  line-height:20px;
+  color:white;
+  text-decoration:none;
+  transition: all 0.4s ease-in-out;
+}
+.navbar_container .navbar_list .navbar_items ul li a:hover{
+  transition: all 0.3s ease-in-out;
+  opacity:0.9;
+}
+
+.navbar_container .navbar_list .navbar_btns{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-direction:row;
+}
+.navbar_container .navbar_list .navbar_btns .signin{
+  font-size:14px;
+  font-family:"Medium";
+  line-height:20px;
+  color:white;
+  background-color:transparent;
+  border:none;
+  outline:0;
+  text-decoration:none;
+  transition: all 0.4s ease-in-out;
+  cursor:pointer;
+  margin-right:3rem;
+}
+.navbar_container .navbar_list .navbar_btns .free{
+  font-size:14px;
+  font-family:"Medium";
+  line-height:20px;
+  color:var(--black);
+  background-color:white;
+  border:none;
+  outline:0;
+  text-decoration:none;
+  transition: all 0.4s ease-in-out;
+  width:135px;
+  height:40px;
+  border-radius:10px;
+  cursor:pointer;
+}
+.navbar_container .navbar_list .navbar_btns .free:hover{
+  opacity:0.9;
+  transition: all 0.4s ease-in-out;
+}
+
+@media only screen and (max-width:769px){
+  .navbar_container .navbar_list{
+    margin:0rem 2rem;
+  }
+}
+@media only screen and (max-width:769px){
+
+}
