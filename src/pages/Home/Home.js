@@ -1,10 +1,81 @@
 import React from 'react'
+import NavBar from '../../components/NavBar/Navbar'
+// import Footer from '../../components/Footer/Footer'
 import './home.css'
+import phonemockup from '../../assets/images/phonemockup.svg'
+import goldmanSachs from '../../assets/images/image9.png'
+import ubs from '../../assets/images/image11.png'
+import juliusbar from '../../assets/images/image12.png'
+import mckinsey from '../../assets/images/image13.png'
 
+import { BsArrowRightShort } from 'react-icons/bs'
+import { MdOutlinePlayArrow } from 'react-icons/md'
+
+import checkCircle from '../../assets/images/check-circle.svg'
+import cpu from '../../assets/images/cpu.svg'
+import lock from '../../assets/images/lock.svg'
 const HomePage = () => {
     return (
-        <div>
-            
+        <div className="home_container">
+            <NavBar />
+            <div className="section_1">
+                <div className="container">
+                    <div className="texts">
+                        <h1>AI-Powered Virtual Data Room</h1>
+                        <p className="app_summary">Cubicle offers a modern deal and data room technology designed with sophisticated simplicity for M&A, divestments, capital raising, IPOs, and restructure.</p>
+                        <div className="btns">
+                            <a href="/" className="try_btn">
+                                <p>Try Cubicle for free</p>
+                                <span><BsArrowRightShort color="#fff" size={20} /></span>
+                            </a>
+                            <a href="/" className="demo_btn">
+                                <span><MdOutlinePlayArrow color="#000" size={20} /></span>
+                                <p>Book a demo</p>
+                            </a>
+                        </div>
+                        <div className="row_imgs">
+                            <ul>
+                                <li><img src={ubs} alt="ubs" className="sponsor_img" /></li>
+                                <li><img src={goldmanSachs} alt="goldmanSachs" className="sponsor_img" /></li>
+                                <li><img src={mckinsey} alt="mckinsey" className="sponsor_img" /></li>
+                                <li><img src={juliusbar} alt="juliusbar" className="sponsor_img" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="app_img">
+                        <img src={phonemockup} alt="phonemockup" className="phonemockup" />
+                    </div>
+                </div>
+            </div>
+            {/* section 2 features*/}
+            <div className="section_2">
+                <div className="container">
+                    <h1>Built for efficiency</h1>
+                    <div className="row_features">
+                        <div className="item">
+                            <img src={checkCircle} alt="Circle" className="icon" />
+                            <h1>Simple modern design</h1>
+                            <p>Intuitive, fast, mobile freindly, and easy-to use, even for first-timers</p>
+                        </div>
+                        <div className="item">
+                            <img src={lock} alt="Circle" className="icon" />
+                            <h1>Ultimate security</h1>
+                            <p>Save and access controls. Track usage and self destruct files</p>
+                        </div>
+                        <div className="item">
+                            <img src={cpu} alt="Circle" className="icon" />
+                            <h1>AI automation & insights</h1>
+                            <p>World-first AI tools automate processes and deliver intelligence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* section 3  testimonials*/}
+            <div className="section_3">
+                <div className="container">
+                    <h1>Testimonials</h1>
+                </div>
+            </div>
         </div>
     )
 }
