@@ -5,6 +5,8 @@
   }
 .navbar_container{
   background-color:var(--black);
+  position:fixed;
+  width:100%;
 }
 .navbar_container .navbar_list{
   display:flex;
@@ -13,6 +15,7 @@
   flex-direction:row;
   height:90px;
   margin:0rem 4rem;
+
 }
 .navbar_container .navbar_list .navbar_items{
   display:flex;
