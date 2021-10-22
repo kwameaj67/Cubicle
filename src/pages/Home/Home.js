@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../../components/NavBar/Navbar'
 // import Footer from '../../components/Footer/Footer'
 import './home.css'
-import phonemockup from '../../assets/images/phonemockup.svg'
+import phonemockup from '../../assets/images/phonemockup.png'
 import goldmanSachs from '../../assets/images/image9.png'
 import ubs from '../../assets/images/image11.png'
 import juliusbar from '../../assets/images/image12.png'
@@ -74,6 +74,50 @@ const HomePage = () => {
             <div className="section_3">
                 <div className="container">
                     <h1>Testimonials</h1>
+                    <div className="row">
+                        <div className="item_one" id="one">
+                            <div className="vid_data">
+                                <div className="vid_details">
+                                    <span><MdOutlinePlayArrow color="#fff" size={30} /></span>
+                                    <div className="vid_contact">
+                                        <p className="name">Tony Flanagan</p>
+                                        <p className="role">VP, UBS</p>
+                                    </div>
+                                </div>
+                                <div className="vid_text">
+                                    <p>“Data room technology does not get any better than this.”</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="item_two" id="two">
+                            <div className="vid_data">
+                                <div className="vid_details">
+                                    <span><MdOutlinePlayArrow color="#fff" size={30} /></span>
+                                    <div className="vid_contact">
+                                        <p className="name">Kuukua Banson</p>
+                                        <p className="role">Associate, Goldman Sachs</p>
+                                    </div>
+                                </div>
+                                <div className="vid_text">
+                                    <p>“Cubicle has greatly improved the workflow for my team.”</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="item_three" id="three">
+                            <div className="vid_data">
+                                <div className="vid_details">
+                                    <span><MdOutlinePlayArrow color="#fff" size={30} /></span>
+                                    <div className="vid_contact">
+                                        <p className="name">Olu Adebisi</p>
+                                        <p className="role">MD, Credit Suisse</p>
+                                    </div>
+                                </div>
+                                <div className="vid_text">
+                                    <p>“The security and data insights of Cubicle are brilliant.”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
