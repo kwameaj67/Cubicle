@@ -8,11 +8,6 @@
   padding:0;
   box-sizing:border-box;
 }
-
-.App {
-  text-align: center;
-}
-
 html {
   scroll-behavior:scroll;
 }
