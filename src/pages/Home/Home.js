@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import NavBar from '../../components/NavBar/Navbar'
 // import Footer from '../../components/Footer/Footer'
 import './home.css'
@@ -14,7 +14,15 @@ import { MdOutlinePlayArrow } from 'react-icons/md'
 import checkCircle from '../../assets/images/check-circle.svg'
 import cpu from '../../assets/images/cpu.svg'
 import lock from '../../assets/images/lock.svg'
+import linkedin from '../../assets/images/linkedin.svg'
+import avatar from '../../assets/images/Ellipse16.png'
+
+import { comments } from '../../Utils/data'
+
 const HomePage = () => {
+
+    const [name,setName] =useState("")
+    const [email,setEmail] =useState("")
     return (
         <div className="home_container">
             <NavBar />
@@ -118,6 +126,55 @@ const HomePage = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            {/* section 4 comments */}
+            <div className="section_4">
+                <div className="container">
+                    <div className="row">
+                        {
+                            comments.map(comment => {
+                                return (
+                                    <div key={comment.id} className="comment_container">
+                                        <div className="item_header">
+                                            <div className="profile_details">
+                                                <div className="avatar_container">
+                                                    <img src={avatar} alt="asd" className="avatar" />
+                                                </div>
+                                                <div className="credentials">
+                                                    <p className="profile_name">{comment.profileName}</p>
+                                                    <p className="user_name">{comment.userName}</p>
+                                                </div>
+                                            </div>
+                                            <div className="company_logo">
+                                                <img src={linkedin} alt={comment.companyLogo} className="compLogo" />
+                                            </div>
+                                        </div>
+                                        <div className="comment_area">
+                                            <p className="comment">{comment.comment}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
+            {/* section 5 */}
+            <div className="section_5">
+                <div className="container">
+                        <div className="text_area">
+                            <h1>Get free access</h1>
+                            <input type="text" placeholder="Name" className="input" onChange={(e)=>{setName(e.target.value)}}/>
+                            <input type="email" placeholder="Email address" className="input"  onChange={(e)=>{setEmail(e.target.value)}}/>
+                            <a href="/" className="try_btn">
+                                <p>Try Cubicle for free</p>
+                                <span><BsArrowRightShort color="#fff" size={20} /></span>
+                            </a>
+                        </div>
+                        <div className="video_area">
+
+                        </div>
                 </div>
             </div>
         </div>
