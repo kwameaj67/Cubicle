@@ -325,16 +325,17 @@
 .section_4 .container .row .comment_container{
   display: flex;
   align-items: flex-start;
+  justify-content:flex-start;
   flex-direction:column;
   background-color: var(--light_black);
   border-radius:10px;
   padding: 1.5rem 2rem;
   cursor:pointer;
   transition: all 0.4s ease-in-out;
-  position:relative;
-  /* flex-grow: 5; */
-  overflow:auto;
-  /* width: auto; */
+  /* position:relative; */
+  width:auto;
+  height:auto;
+  flex-wrap: wrap;
 }
 .section_4 .container .row .comment_container:hover{
   transition: all 0.4s ease-in-out;
@@ -394,16 +395,14 @@
 }
 .section_4 .container .row .comment_container .comment_area{
   margin: 1.2rem 0rem;
-  width:auto;
-  height:auto;
-  overflow:hidden;
-  flex:1;
+  overflow: auto
 }
 .section_4 .container .row .comment_container .comment_area .comment{
   font-size:14px;
   font-family:"Medium";
   line-height:25px;
   color: white;
+  overflow: auto;
 }
 
 /* section 5 */
