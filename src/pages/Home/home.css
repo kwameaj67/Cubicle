@@ -167,7 +167,9 @@
 /* section 3 testimonials */
 
 .section_3{
-  padding: 8rem 4rem;
+  padding: 0rem 4rem;
+  padding-top:6rem;
+  padding-bottom:0rem;
 }
 .section_3 .container{
   display: flex;
@@ -317,8 +319,7 @@
 .section_4 .container .row{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 0rem 3.5rem;
-  flex-grow: 5;
+  grid-gap: 2.5rem 3.5rem;
 }
 
 .section_4 .container .row .comment_container{
@@ -326,9 +327,8 @@
   align-items: flex-start;
   flex-direction:column;
   background-color: var(--light_black);
-  margin:0.8rem 0rem;
   border-radius:10px;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   cursor:pointer;
   transition: all 0.4s ease-in-out;
   position:relative;
@@ -394,6 +394,10 @@
 }
 .section_4 .container .row .comment_container .comment_area{
   margin: 1.2rem 0rem;
+  width:auto;
+  height:auto;
+  overflow:hidden;
+  flex:1;
 }
 .section_4 .container .row .comment_container .comment_area .comment{
   font-size:14px;
@@ -411,10 +415,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* background-color: red; */
 }
 .section_5 .container .text_area{
-  flex-basis:30%
+  flex-basis:40%
 }
 .section_5 .container .text_area h1{
   font-size:35px;
@@ -461,5 +464,21 @@
   margin-top:5px;
 }
 .section_5 .container .video_area{
-  flex-basis:70%
+  display:flex;
+  justify-content:center;
+  /* align-items:center; */
+  flex-direction:column;
+  flex-basis:60%
+}
+.section_5 .container .video_area .vid{
+  display:flex;
+  position:relative;
+}
+.section_5 .container .video_area h1{
+  font-size:35px;
+  color:white;
+  font-family:"Medium";
+  position:absolute;
+  max-width:250px;
+  margin-left:20px;
 }

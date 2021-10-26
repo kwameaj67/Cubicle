@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import NavBar from '../../components/NavBar/Navbar'
-// import Footer from '../../components/Footer/Footer'
+import Footer from '../../components/Footer/Footer'
 import './home.css'
 import phonemockup from '../../assets/images/phonemockup.png'
 import goldmanSachs from '../../assets/images/image9.png'
@@ -16,6 +16,8 @@ import cpu from '../../assets/images/cpu.svg'
 import lock from '../../assets/images/lock.svg'
 import linkedin from '../../assets/images/linkedin.svg'
 import avatar from '../../assets/images/Ellipse16.png'
+
+import vid from '../../assets/vids/vid.MP4'
 
 import { comments } from '../../Utils/data'
 
@@ -173,10 +175,15 @@ const HomePage = () => {
                             </a>
                         </div>
                         <div className="video_area">
-
+                            <video width="820" height="340" controls className="vid">
+                                <source src={vid}  type="video/mp4"/>
+                                Your browser does not support the video tag.
+                            </video>
+                            <h1>Get started with Cubicle</h1>
                         </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
