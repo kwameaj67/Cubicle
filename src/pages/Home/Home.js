@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import NavBar from '../../components/NavBar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import './home.css'
+import './responsive.css'
 import phonemockup from '../../assets/images/phonemockup.png'
 import goldmanSachs from '../../assets/images/image9.png'
 import ubs from '../../assets/images/image11.png'
@@ -175,11 +176,12 @@ const HomePage = () => {
                             </a>
                         </div>
                         <div className="video_area">
-                            <video width="820" height="340" controls className="vid">
+                            <video 
+                            controls className="vid">
                                 <source src={vid}  type="video/mp4"/>
                                 Your browser does not support the video tag.
                             </video>
-                            <h1>Get started with Cubicle</h1>
+                            <h1>Get started with Cubicle now!</h1>
                         </div>
                 </div>
             </div>

@@ -17,8 +17,12 @@ const Navbar = () => {
                 <div className="navbar_btns">
                     <button className="signin">Sign in</button>
                     <button className="free">Try it for free</button>
-
-                </div>    
+                </div>   
+                <div className="menu_container">
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                </div> 
             </div>
         </div>
     )
