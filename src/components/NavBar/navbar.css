@@ -5,8 +5,8 @@
   }
 .navbar_container{
   background-color:var(--black);
-  position:fixed;
-  width:100%;
+  /* position:fixed; */
+  /* width:100%; */
   z-index:9999;
 }
 .navbar_container .navbar_list{
@@ -88,12 +88,34 @@
   opacity:0.9;
   transition: all 0.4s ease-in-out;
 }
+.navbar_container .navbar_list .menu_container{
+  width:20px;
+  height:20px;
+  background-color:red;
+  display:none;
+}
 
 @media only screen and (max-width:769px){
   .navbar_container .navbar_list{
     margin:0rem 2rem;
   }
+  .navbar_container .navbar_list .navbar_items ul{
+    display:none;
+  }
+  .navbar_container .navbar_list .navbar_btns {
+    display:none;
+  }
+  .navbar_container .navbar_list .menu_container{
+    display:block;
+  }
 }
-@media only screen and (max-width:769px){
-
+@media only screen and (max-width:900px){
+  .navbar_container .navbar_list .navbar_items ul{
+    margin-left:1rem;
+  }
+  .navbar_container .navbar_list .navbar_items ul li{
+    display:inline-block;
+    padding:0rem 1rem;
+  }
+  
 }

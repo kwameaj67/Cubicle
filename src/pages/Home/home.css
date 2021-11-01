@@ -6,6 +6,7 @@
 }
 .home_container{
   background-color:var(--black);
+  width:100%;
 }
 
 .section_1{
@@ -71,7 +72,7 @@
   justify-content:space-between;
   align-items:center;
   flex-direction:row;
-  background-color:transparent;
+  background-color:#343434;
   text-decoration:none;
   width:200px;
   height:49px;
@@ -110,11 +111,13 @@
 .section_1 .container .app_img{
   flex-basis:50%;
   text-align:center;
-  
-}
-.section_1 .container .app_img .phonemockup{
   height:573px;
   width:370px;
+}
+.section_1 .container .app_img .phonemockup{
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 
 /* section 2 */
@@ -168,8 +171,6 @@
 
 .section_3{
   padding: 0rem 4rem;
-  padding-top:6rem;
-  padding-bottom:0rem;
 }
 .section_3 .container{
   display: flex;
@@ -181,12 +182,19 @@
   line-height:48px;
   color: #fff;
 }
+  .section_3 .container .row::webkit-scrollbar {
+  display: none;
+  }
 .section_3 .container .row{
+  margin:4rem 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin:4rem 0rem;
+  /* overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  */
 }
 .section_3 .container .row .item_one {
   display: flex;
@@ -257,6 +265,7 @@
   flex-direction:column;
   position:absolute;
   bottom:0;
+  width:100%;
 }
 .section_3 .container .row .item_one .vid_data .vid_details,
 .section_3 .container .row .item_two .vid_data .vid_details,
@@ -416,7 +425,10 @@
   justify-content: space-between;
 }
 .section_5 .container .text_area{
-  flex-basis:40%
+  flex-basis:40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .section_5 .container .text_area h1{
   font-size:35px;
@@ -465,12 +477,13 @@
 .section_5 .container .video_area{
   display:flex;
   justify-content:center;
-  /* align-items:center; */
   flex-direction:column;
-  flex-basis:60%
+  flex-basis:60%;
 }
 .section_5 .container .video_area .vid{
   display:flex;
+  width:720px;
+  height:340px;
   position:relative;
 }
 .section_5 .container .video_area h1{
@@ -480,4 +493,5 @@
   position:absolute;
   max-width:250px;
   margin-left:20px;
+  text-align:center;
 }
