@@ -89,10 +89,14 @@
   transition: all 0.4s ease-in-out;
 }
 .navbar_container .navbar_list .menu_container{
-  width:20px;
-  height:20px;
-  background-color:red;
   display:none;
+}
+.navbar_container .navbar_list .menu_container .bar{
+  display:block;
+  width:30px;
+  height:1.5px;
+  margin-bottom: 10px;
+  background-color:white;
 }
 
 @media only screen and (max-width:769px){

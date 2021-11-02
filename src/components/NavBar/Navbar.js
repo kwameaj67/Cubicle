@@ -21,7 +21,6 @@ const Navbar = () => {
                 <div className="menu_container">
                     <span className="bar"></span>
                     <span className="bar"></span>
-                    <span className="bar"></span>
                 </div> 
             </div>
         </div>
