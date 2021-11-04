@@ -24,7 +24,9 @@ import { comments } from '../../Utils/data'
 
 const HomePage = () => {
 
+    // eslint-disable-next-line
     const [name,setName] =useState("")
+    // eslint-disable-next-line
     const [email,setEmail] =useState("")
     return (
         <div className="home_container">
