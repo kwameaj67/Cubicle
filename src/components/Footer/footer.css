@@ -31,14 +31,17 @@
       padding: 1rem 0rem;
   }
   .footer_container .footer_itembox ul li a{
-      font-size: 15px;
-      font-family:"Regular";
+      font-size: 14px;
+      font-family:"Medium";
       color: #fff;
       text-decoration: none;
       opacity:0.8;
+      transition:0.2s ease-in;
   }
   .footer_container .footer_itembox ul li a:hover{
-      text-decoration:underline;
+      opacity:0.5;
+      transform: translateX(-5px);
+      transition:0.2s ease-in;
   }
   .footer_container .contact{
       bootom:0;

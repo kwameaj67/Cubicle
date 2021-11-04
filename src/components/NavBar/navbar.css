@@ -43,11 +43,11 @@
   line-height:20px;
   color:white;
   text-decoration:none;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .navbar_container .navbar_list .navbar_items ul li a:hover{
-  transition: all 0.3s ease-in-out;
-  opacity:0.9;
+  transition: all 0.5s ease-in-out;
+  opacity:0.8;
 }
 
 .navbar_container .navbar_list .navbar_btns{
@@ -78,15 +78,18 @@
   border:none;
   outline:0;
   text-decoration:none;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in;
   width:135px;
   height:40px;
   border-radius:10px;
   cursor:pointer;
 }
 .navbar_container .navbar_list .navbar_btns .free:hover{
-  opacity:0.9;
-  transition: all 0.4s ease-in-out;
+  background-color:transparent;
+  border:0.5px solid white;
+  border-radius:10px;
+  color:white;
+  transition: all 0.4s ease-in;
 }
 /* menu bar */
 .navbar_container .navbar_list .menu{
@@ -145,8 +148,8 @@
   /* hamburger menu */
   .hamburger_container{
     display:none;
-    top:0;
-    transition: 0.5s all ease-in-out;
+    left:0;
+    transition: 250ms all ease-in-out;
     box-sizing: border-box;
 }
 .hamburger_container.active{
@@ -157,9 +160,10 @@
     /* margin:0px 3.5rem; */
     height:100vh;
     width: 100%;
+    left:0;
     backdrop-filter: blur(20px);
     z-index: 9999;
-    transition: 0.5s all ease-in-out;
+    transition: 250ms all ease-in-out;
 }
 .hamburger_links{
     list-style: none;
@@ -175,6 +179,11 @@
     color:white;
     text-decoration:none;
     text-align:center;
+    transition:0.5s all ease-in;
+}
+.hamburger_links li a:hover{
+  opacity:0.6;
+  transition:0.5s all ease-in;
 }
 .hamburger_links li:nth-child(4){
     margin-bottom:50px;
@@ -194,12 +203,19 @@
   border:none;
   outline:0;
   text-decoration:none;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in;
   cursor:pointer;
   width:280px;
   height:50px;
   border-radius:10px;
   margin-bottom:1rem;
+}
+.hamburger_container .hamburger_buttons .signin:hover{
+  background-color:transparent;
+  border: 1px solid white;
+  border-radius:10px;
+  transition: all 0.5s ease-in;
+  color:white;
 }
 .hamburger_container .hamburger_buttons .free{
   font-size:14px;
@@ -210,11 +226,18 @@
   border:none;
   outline:0;
   text-decoration:none;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor:pointer;
   width:280px;
   height:50px;
   border-radius:10px;
+}
+.hamburger_container .hamburger_buttons .free:hover{
+  background-color:transparent;
+  border: 1px solid white;
+  border-radius:10px;
+  transition: all 0.5s ease-in;
+  color:white;
 }
 }
 @media only screen and (max-width:900px){
