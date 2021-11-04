@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,useRef } from 'react'
 import './home.css'
 import './responsive.css'
 import phonemockup from '../../assets/images/phonemockup.png'
@@ -36,9 +36,28 @@ const HomePage = () => {
     const [name, setName] = useState("")
     // eslint-disable-next-line
     const [email, setEmail] = useState("")
+    
+    let h1 = useRef(null);
+    let pText = useRef(null);
+    let btns = useRef(null);
+    let imgs = useRef(null);
+    let phoneImg = useRef(null);
 
     useEffect(() => {
         aos.init()
+        timeline.from([h1, pText, btns,imgs],{
+            opacity:0,
+            y:"100",
+            skewY:10,
+            stagger:{
+                amount:.4
+            }
+        },"-=1")
+        timeline.from(phoneImg,1.2,{
+            y:-240,
+            ease:10,
+            opacity:0
+        },"-=1.2")
     }, [])
     return (
         <div className="home_container">
@@ -46,9 +65,9 @@ const HomePage = () => {
                 <div className="section_1">
                     <div className="container">
                         <div className="texts">
-                            <h1 data-aos="fade-down" data-aos-duration="3000">AI-Powered Virtual Data Room</h1>
-                            <p data-aos="fade-down" data-aos-duration="3000" className="app_summary">Cubicle offers a modern deal and data room technology designed with sophisticated simplicity for M&A, divestments, capital raising, IPOs, and restructure.</p>
-                            <div data-aos="fade-down" data-aos-duration="3000" className="btns">
+                            <h1 ref={el => h1 = el}>AI-Powered Virtual Data Room</h1>
+                            <p ref={el => pText = el} className="app_summary">Cubicle offers a modern deal and data room technology designed with sophisticated simplicity for M&A, divestments, capital raising, IPOs, and restructure.</p>
+                            <div ref={el => btns = el} className="btns">
                                 <a href="/" className="try_btn">
                                     <p>Try Cubicle for free</p>
                                     <span><BsArrowRightShort color="#fff" size={20} /></span>
@@ -58,7 +77,7 @@ const HomePage = () => {
                                     <p>Book a demo</p>
                                 </a>
                             </div>
-                            <div data-aos="fade-down" data-aos-duration="3000" className="row_imgs">
+                            <div ref={el => imgs = el} className="row_imgs">
                                 <ul>
                                     <li><img src={ubs} alt="ubs" className="sponsor_img" /></li>
                                     <li><img src={goldmanSachs} alt="goldmanSachs" className="sponsor_img" /></li>
@@ -67,7 +86,7 @@ const HomePage = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div data-aos="fade-down" data-aos-duration="3000" className="app_img">
+                        <div ref={el => phoneImg = el} className="app_img">
                             <img src={phonemockup} alt="phonemockup" className="phonemockup" />
                         </div>
                     </div>
