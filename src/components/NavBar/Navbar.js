@@ -21,6 +21,11 @@ const Navbar = ({timeline}) => {
             opacity:0,
             y:-100
         })
+        timeline.from(menuBarRef,{
+            duration:.5,
+            opacity:0,
+            y:-100
+        })
         timeline.from(menuItemsRef,{
             duration:1,
             opacity:0,
@@ -32,10 +37,12 @@ const Navbar = ({timeline}) => {
             y:-100
         },"-=.5")
         
+        
     }
     useEffect(()=>{
         animations()
         aos.init()
+        // eslint-disable-next-line
     },[])
     return (
         <div className="navbar_container">

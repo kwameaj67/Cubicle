@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import NavBar from '../../components/NavBar/Navbar'
-import Footer from '../../components/Footer/Footer'
 import './home.css'
 import './responsive.css'
 import phonemockup from '../../assets/images/phonemockup.png'
@@ -8,6 +6,9 @@ import goldmanSachs from '../../assets/images/image9.png'
 import ubs from '../../assets/images/image11.png'
 import juliusbar from '../../assets/images/image12.png'
 import mckinsey from '../../assets/images/image13.png'
+
+import NavBar from '../../components/NavBar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 import { BsArrowRightShort } from 'react-icons/bs'
 import { MdOutlinePlayArrow } from 'react-icons/md'
@@ -17,13 +18,17 @@ import cpu from '../../assets/images/cpu.svg'
 import lock from '../../assets/images/lock.svg'
 import linkedin from '../../assets/images/linkedin.svg'
 import avatar from '../../assets/images/Ellipse16.png'
-
 import vid from '../../assets/vids/vid.MP4'
-
 import { comments } from '../../Utils/data'
 import gsap from 'gsap'
 import "aos/dist/aos.css";
 import aos from 'aos'
+
+// const NavBar = React.lazy(()=> import('../../components/NavBar/Navbar'))
+// const Footer = React.lazy(()=> import('../../components/Footer/Footer'))
+
+
+
 
 const HomePage = () => {
     const timeline = gsap.timeline()
@@ -41,9 +46,9 @@ const HomePage = () => {
                 <div className="section_1">
                     <div className="container">
                         <div className="texts">
-                            <h1 data-aos="fade-up" data-aos-duration="2000">AI-Powered Virtual Data Room</h1>
-                            <p data-aos="fade-up" data-aos-duration="2000" className="app_summary">Cubicle offers a modern deal and data room technology designed with sophisticated simplicity for M&A, divestments, capital raising, IPOs, and restructure.</p>
-                            <div data-aos="fade-up" data-aos-duration="2000" className="btns">
+                            <h1 data-aos="fade-down" data-aos-duration="3000">AI-Powered Virtual Data Room</h1>
+                            <p data-aos="fade-down" data-aos-duration="3000" className="app_summary">Cubicle offers a modern deal and data room technology designed with sophisticated simplicity for M&A, divestments, capital raising, IPOs, and restructure.</p>
+                            <div data-aos="fade-down" data-aos-duration="3000" className="btns">
                                 <a href="/" className="try_btn">
                                     <p>Try Cubicle for free</p>
                                     <span><BsArrowRightShort color="#fff" size={20} /></span>
@@ -53,7 +58,7 @@ const HomePage = () => {
                                     <p>Book a demo</p>
                                 </a>
                             </div>
-                            <div data-aos="fade-up" data-aos-duration="2000" className="row_imgs">
+                            <div data-aos="fade-down" data-aos-duration="3000" className="row_imgs">
                                 <ul>
                                     <li><img src={ubs} alt="ubs" className="sponsor_img" /></li>
                                     <li><img src={goldmanSachs} alt="goldmanSachs" className="sponsor_img" /></li>
@@ -62,7 +67,7 @@ const HomePage = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div data-aos="fade-up" data-aos-duration="2000" className="app_img">
+                        <div data-aos="fade-down" data-aos-duration="3000" className="app_img">
                             <img src={phonemockup} alt="phonemockup" className="phonemockup" />
                         </div>
                     </div>

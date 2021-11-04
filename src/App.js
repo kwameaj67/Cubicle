@@ -10,7 +10,6 @@ function App() {
       <Suspense fallback={
       <div className="loader">
          <img src={logo} alt="logo" className="logo" />
-         {/* Loading... */}
       </div>
       }>
         <HomePage />
