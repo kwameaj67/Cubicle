@@ -2,6 +2,8 @@ import React, { useState,useRef,useEffect } from 'react'
 import './navbar.css'
 import logo from '../../assets/images/cubicleLogo.svg'
 
+import "aos/dist/aos.css";
+import aos from 'aos'
 
 const Navbar = ({timeline}) => {
     
@@ -9,7 +11,6 @@ const Navbar = ({timeline}) => {
     let menuItemsRef = useRef(null)
     let menuBtnsRef = useRef(null)
     let menuBarRef = useRef(null)
-    let hamburgerRef = useRef(null)
     const [show, setShow] = useState(false)
     const toggleMenu = () => {
         setShow(!show)
@@ -30,19 +31,11 @@ const Navbar = ({timeline}) => {
             opacity:0,
             y:-100
         },"-=.5")
-        // timeline.from(menuBarRef,{
-        //     duration:1,
-        //     opacity:0,
-        //     y:-100
-        // },"-=.5")
-        // timeline.from(hamburgerRef,{
-        //     duration:0.5,
-        //     opacity:1,
-        //     y:100
-        // },)
+        
     }
     useEffect(()=>{
         animations()
+        aos.init()
     },[])
     return (
         <div className="navbar_container">
@@ -59,7 +52,7 @@ const Navbar = ({timeline}) => {
                     <button className="signin">Sign in</button>
                     <button className="free">Try it for free</button>
                 </div>
-                <div className={show ? "menu is-active" : "menu"} onClick={toggleMenu} id="mobile_menu">
+                <div className={show ? "menu is-active" : "menu"} onClick={toggleMenu} id="mobile_menu" ref={el => menuBtnsRef = el}>
                     <div className="bar_items" ref={el => menuBarRef = el}>
                         <span className="bar"></span>
                         <span className="bar"></span>
@@ -68,8 +61,8 @@ const Navbar = ({timeline}) => {
                 </div>
             </div>
             {/* hamburger menu */}
-            <div className={show ? "hamburger_container active" : "hamburger_container"} ref={el => hamburgerRef = el}>
-                <ul className="hamburger_links">
+            <div className={show ? "hamburger_container active" : "hamburger_container"}>
+                <ul  className="hamburger_links">
                     <li><a href="/">Products</a></li>
                     <li><a href="/">Resources</a></li>
                     <li><a href="/">Pricing</a></li>

@@ -21,8 +21,8 @@ import avatar from '../../assets/images/Ellipse16.png'
 import vid from '../../assets/vids/vid.MP4'
 
 import { comments } from '../../Utils/data'
-import "aos/dist/aos.css";
 import gsap from 'gsap'
+import "aos/dist/aos.css";
 import aos from 'aos'
 
 const HomePage = () => {
@@ -93,7 +93,7 @@ const HomePage = () => {
             {/* section 3  testimonials*/}
             <div className="section_3">
                 <div className="container">
-                    <h1 data-aos="fade-down" data-aos-duration="8000">Testimonials</h1>
+                    <h1 data-aos="fade-up" data-aos-duration="8000">Testimonials</h1>
                     <div className="row">
                         <div data-aos="fade-up" data-aos-duration="1000" className="item_one" id="one">
                             <div className="vid_data">
