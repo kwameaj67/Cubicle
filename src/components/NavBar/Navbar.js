@@ -52,8 +52,8 @@ const Navbar = ({timeline}) => {
                     <button className="signin">Sign in</button>
                     <button className="free">Try it for free</button>
                 </div>
-                <div className={show ? "menu is-active" : "menu"} onClick={toggleMenu} id="mobile_menu" ref={el => menuBtnsRef = el}>
-                    <div className="bar_items" ref={el => menuBarRef = el}>
+                <div className={show ? "menu is-active" : "menu"} onClick={toggleMenu} id="mobile_menu" ref={el => menuBarRef = el}>
+                    <div className="bar_items">
                         <span className="bar"></span>
                         <span className="bar"></span>
                         <span className="bar"></span>

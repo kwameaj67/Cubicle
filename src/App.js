@@ -1,10 +1,20 @@
+import React, { Suspense } from 'react';
 import './App.css';
-import HomePage from './pages/Home/Home'
+import logo from './assets/images/cubicleLogo.svg'
+
+const HomePage = React.lazy(()=> import('./pages/Home/Home') )
 
 function App() {
   return (
     <div className="App">
-     <HomePage/>
+      <Suspense fallback={
+      <div className="loader">
+         <img src={logo} alt="logo" className="logo" />
+         {/* Loading... */}
+      </div>
+      }>
+        <HomePage />
+      </Suspense>
     </div>
   );
 }
