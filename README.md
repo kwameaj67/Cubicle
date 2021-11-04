@@ -6,5 +6,5 @@ This project was created with [React](https://github.com/facebook/create-react-a
 Open [Cubicle](https://cubicle-app.netlify.app/)
 
 ## Screenshot
-
+<img align='left' src="Cubicle/src/assets/images/landingPage.jpg"  width="1000">
 
