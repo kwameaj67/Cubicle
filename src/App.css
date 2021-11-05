@@ -13,7 +13,6 @@ html {
 }
 .App {
   background-color:var(--black);
-  
 }
 .App .loader{
   display:flex;
