@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from 'react'
+import React, { useState, useEffect,useRef,createRef } from 'react'
 import './home.css'
 import './responsive.css'
 import phonemockup from '../../assets/images/phonemockup.png'
@@ -18,11 +18,12 @@ import cpu from '../../assets/images/cpu.svg'
 import lock from '../../assets/images/lock.svg'
 import linkedin from '../../assets/images/linkedin.svg'
 import avatar from '../../assets/images/Ellipse16.png'
-import vid from '../../assets/vids/vid.MP4'
+import vid from '../../assets/vids/vid 2.MP4'
 import { comments } from '../../Utils/data'
 import gsap from 'gsap'
 import "aos/dist/aos.css";
 import aos from 'aos'
+import locomotive from 'locomotive-scroll'
 
 // const NavBar = React.lazy(()=> import('../../components/NavBar/Navbar'))
 // const Footer = React.lazy(()=> import('../../components/Footer/Footer'))
@@ -31,6 +32,7 @@ import aos from 'aos'
 
 
 const HomePage = () => {
+    const scrollRef = createRef()
     const timeline = gsap.timeline()
     // eslint-disable-next-line
     const [name, setName] = useState("")
@@ -58,9 +60,15 @@ const HomePage = () => {
             ease:10,
             opacity:0
         },"-=1.2")
+         // eslint-disable-next-line
+        // const scroll = new locomotive({
+        //     el:scrollRef.current,
+        //     smooth:true
+        // })
+        // eslint-disable-next-line
     }, [])
     return (
-        <div className="home_container">
+        <div  className="home_container" >
                 <NavBar timeline={timeline} />
                 <div className="section_1">
                     <div className="container">
