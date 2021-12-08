@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef,createRef } from 'react'
+import React, { useState, useEffect,useRef } from 'react'
 import './home.css'
 import './responsive.css'
 import phonemockup from '../../assets/images/phonemockup.png'
@@ -6,6 +6,7 @@ import goldmanSachs from '../../assets/images/image9.png'
 import ubs from '../../assets/images/image11.png'
 import juliusbar from '../../assets/images/image12.png'
 import mckinsey from '../../assets/images/image13.png'
+import movieRectangle from '../../assets/images/Rectangle72.png'
 
 import NavBar from '../../components/NavBar/Navbar'
 import Footer from '../../components/Footer/Footer'
@@ -18,12 +19,12 @@ import cpu from '../../assets/images/cpu.svg'
 import lock from '../../assets/images/lock.svg'
 import linkedin from '../../assets/images/linkedin.svg'
 import avatar from '../../assets/images/Ellipse16.png'
-import vid from '../../assets/vids/vid 2.MP4'
+// import vid from '../../assets/vids/vid 2.MP4'
 import { comments } from '../../Utils/data'
 import gsap from 'gsap'
 import "aos/dist/aos.css";
 import aos from 'aos'
-import locomotive from 'locomotive-scroll'
+// import locomotive from 'locomotive-scroll'
 
 // const NavBar = React.lazy(()=> import('../../components/NavBar/Navbar'))
 // const Footer = React.lazy(()=> import('../../components/Footer/Footer'))
@@ -32,7 +33,7 @@ import locomotive from 'locomotive-scroll'
 
 
 const HomePage = () => {
-    const scrollRef = createRef()
+    // const scrollRef = createRef()
     const timeline = gsap.timeline()
     // eslint-disable-next-line
     const [name, setName] = useState("")
@@ -217,12 +218,13 @@ const HomePage = () => {
                             </a>
                         </div>
                         <div data-aos="fade-up" data-aos-duration="1200" className="video_area">
-                            <video
+                            <img src={movieRectangle} className="vid" alt="vid"/>
+                            {/* <video
                                 controls className="vid">
                                 <source src={vid} type="video/mp4" />
                                 Your browser does not support the video tag.
-                            </video>
-                            <h1>Get started with Cubicle now!</h1>
+                            </video> */}
+                            <h1>Get started with Cubicle</h1>
                         </div>
                     </div>
                 </div>
